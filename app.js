@@ -19,6 +19,7 @@ app.post('/Run', function (req, res) {
 	
 	//pull out specific key value pairs
 	var url = req.body.complete_sbol.toString()
+	var url = url.replace("/sbol","");
 	var instance = req.body.instanceUrl.toString()
 	var uri = req.body.top_level.toString()
 	
