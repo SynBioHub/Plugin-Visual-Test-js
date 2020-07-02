@@ -29,6 +29,7 @@ app.post('/Run', function (req, res) {
 		html_read = html_read.replace("INSTANCE_REPLACE", instance);
 		html_read = html_read.replace("URI_REPLACE", uri);
 		html_read = html_read.replace("URL_REPLACE", url);
+		html_read = html_read.replace("REQUEST_REPLACE", data);
 		
 		//return html
 		res.send(html_read)
