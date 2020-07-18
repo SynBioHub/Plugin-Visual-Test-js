@@ -6,11 +6,22 @@ const port = 5000
 app.use(express.json());
 
 app.get('/Status', function (req, res) {
-	res.status(200).send('The plugin is up and running')
+	res.status(200).send('The test visualisation plugin is up and running')
 })
 
 app.post('/Evaluate', function (req, res) {
-	res.status(200).send('The app can handle this input')
+	var data =  JSON.stringify(req.body)
+	var rdf_type = req.body.type.toString()
+	
+	////////REPLACE THIS SECTION WITH OWN RUN CODE ////////////
+	acceptable = true
+	//////////////////END SECTION//////////////////////////////
+	
+	if (acceptable) {
+		res.status(200).send(`The type sent (${rdf_type}) is an accepted type`);
+	} else {
+		res.status(415).send(`The type sent (${rdf_type}) is NOT an accepted type`);
+	};
 })
 
 app.post('/Run', function (req, res) {
