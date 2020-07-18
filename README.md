@@ -1,4 +1,4 @@
-# Plugin-Visualisation-Test-js
+# Plugin-Visual-Test-js
 A small test plugin to test the visualisation interface is working for SynBioHub. Could be the basis for javascript (Node.js) based visualisation plugins.
 
 # Install
